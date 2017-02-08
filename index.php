@@ -3,7 +3,7 @@
 include 'mysql.php';
 
 echo '<h1>My First Blog</h1>';
-echo "<em>Not just another WordPress web log</em><hr/>";
+echo "<em>What a busy day...!!!</em><hr/>";
 
 $result = mysql_safe_query('SELECT * FROM posts ORDER BY date DESC');
 
