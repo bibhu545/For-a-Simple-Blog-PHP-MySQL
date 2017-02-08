@@ -1,0 +1,20 @@
+Create the following tables. You can do so by running the following code in the “SQL” tab of phpMyAdmin if you have it installed.
+
+CREATE TABLE `posts` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(255) NOT NULL,
+  `body` text NOT NULL,
+  `num_comments` INT(11) NOT NULL DEFAULT '0',
+  `date` INT(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `comments` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `post_id` INT(11) NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `website` VARCHAR(255) DEFAULT NULL,
+  `content` text NOT NULL,
+  `date` INT(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
